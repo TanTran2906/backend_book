@@ -1,6 +1,7 @@
 const Sach = require('../models/sachModel');
 const asyncHandler = require('../middleware/asyncHandler');
 const AppError = require('../middleware/appError');
+const TheoDoiMuonSach = require('../models/donMuonModel');
 
 // Lấy danh sách các sách
 const getSachList = asyncHandler(async (req, res, next) => {
@@ -10,12 +11,19 @@ const getSachList = asyncHandler(async (req, res, next) => {
 
 // Tạo một sách mới
 const createSach = asyncHandler(async (req, res, next) => {
-    const { TenSach, HinhAnh, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
+    const { TenSach, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
 
     // Kiểm tra xem sách đã tồn tại chưa
     const existingSach = await Sach.findOne({ TenSach, MaNXB, NamXuatBan });
     if (existingSach) {
         return next(new AppError('Sách đã tồn tại', 400));
+    }
+
+    // Kiểm tra xem có tệp hình ảnh được tải lên không
+    let HinhAnh = null;
+    if (req.file) {
+        // Nếu có tệp hình ảnh, lấy đường dẫn đến hình ảnh
+        HinhAnh = `/${req.file.path.replace(/\\/g, '/')}`;
     }
 
     // Tạo sách mới
@@ -25,12 +33,13 @@ const createSach = asyncHandler(async (req, res, next) => {
     res.status(201).json(sach);
 });
 
+
 // Cập nhật thông tin của một sách
 const updateSach = asyncHandler(async (req, res, next) => {
     const { id } = req.params;
-    const { TenSach, HinhAnh, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
+    const { TenSach, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
 
-    // Tìm sách theo mã ID và cập nhật
+    // Tìm sách theo mã ID
     const sach = await Sach.findById(id);
     if (!sach) {
         return next(new AppError('Sách không tồn tại', 404));
@@ -38,12 +47,17 @@ const updateSach = asyncHandler(async (req, res, next) => {
 
     // Cập nhật thông tin sách
     sach.TenSach = TenSach || sach.TenSach;
-    sach.HinhAnh = HinhAnh || sach.HinhAnh;
     sach.DonGia = DonGia || sach.DonGia;
     sach.SoQuyen = SoQuyen || sach.SoQuyen;
     sach.NamXuatBan = NamXuatBan || sach.NamXuatBan;
     sach.MaNXB = MaNXB || sach.MaNXB;
     sach.TacGia = TacGia || sach.TacGia;
+
+    // Xử lý hình ảnh nếu có tệp được tải lên
+    if (req.file) {
+        // Nếu có tệp hình ảnh, cập nhật thuộc tính HinhAnh
+        sach.HinhAnh = `/${req.file.path.replace(/\\/g, '/')}`;
+    }
 
     const updatedSach = await sach.save();
 
@@ -54,12 +68,19 @@ const updateSach = asyncHandler(async (req, res, next) => {
 const deleteSach = asyncHandler(async (req, res, next) => {
     const { id } = req.params;
 
-    // Tìm và xóa sách theo mã ID
+    // Kiểm tra xem sách có đang nằm trong đơn mượn nào không
+    const isBorrowed = await TheoDoiMuonSach.exists({ MaSach: id });
+    if (isBorrowed) {
+        return next(new AppError('Sách đang nằm trong đơn mượn sách và không thể xóa.', 400));
+    }
+
+    // Tìm sách theo mã ID
     const sach = await Sach.findById(id);
     if (!sach) {
         return next(new AppError('Sách không tồn tại', 404));
     }
 
+    // Xóa sách
     await sach.remove();
     res.status(200).json({ message: 'Sách đã được xóa' });
 });
@@ -78,12 +99,31 @@ const getSachById = asyncHandler(async (req, res, next) => {
     res.status(200).json(sach);
 });
 
+const findSachByName = asyncHandler(async (req, res, next) => {
+    const { name } = req.query; // Lấy tên sách từ query parameters
+
+    // Tìm sách theo tên
+    const sachList = await Sach.find({
+        TenSach: { $regex: new RegExp(name, 'i') } // Sử dụng biểu thức chính quy để tìm kiếm tên sách không phân biệt chữ hoa chữ thường
+    });
+
+    // Nếu không tìm thấy sách, trả về thông báo
+    if (sachList.length === 0) {
+        return next(new AppError('Không tìm thấy sách nào', 404));
+    }
+
+    // Trả về danh sách sách tìm được
+    res.status(200).json(sachList);
+});
+
+
 module.exports = {
     getSachList,
     createSach,
     updateSach,
     deleteSach,
-    getSachById
+    getSachById,
+    findSachByName
 };
 
 

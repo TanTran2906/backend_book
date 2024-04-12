@@ -5,7 +5,8 @@ const {
     createNhaXuatBan,
     updateNhaXuatBan,
     deleteNhaXuatBan,
-    getNhaXuatBanById
+    getNhaXuatBanById,
+    findNhaXuatBanByName
 } = require('../controllers/nhaXuatBanController');
 
 // Lấy danh sách các nhà xuất bản
@@ -20,5 +21,7 @@ router.put('/:id', updateNhaXuatBan);
 
 // Xóa nhà xuất bản
 router.delete('/:id', deleteNhaXuatBan);
+
+router.get('/search', findNhaXuatBanByName);
 
 module.exports = router;

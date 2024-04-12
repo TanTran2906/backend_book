@@ -76,10 +76,29 @@ const getNhaXuatBanById = asyncHandler(async (req, res, next) => {
     res.status(200).json(nhaXuatBan);
 });
 
+const findNhaXuatBanByName = asyncHandler(async (req, res, next) => {
+    const { name } = req.query; // Lấy tên nhà xuất bản từ query parameters
+
+    // Tìm nhà xuất bản theo tên
+    const nhaXuatBanList = await NhaXuatBan.find({
+        TenNXB: { $regex: new RegExp(name, 'i') } // Sử dụng biểu thức chính quy để tìm kiếm tên nhà xuất bản không phân biệt chữ hoa chữ thường
+    });
+
+    // Nếu không tìm thấy nhà xuất bản, trả về thông báo
+    if (nhaXuatBanList.length === 0) {
+        return next(new AppError('Không tìm thấy nhà xuất bản nào', 404));
+    }
+
+    // Trả về danh sách nhà xuất bản tìm được
+    res.status(200).json(nhaXuatBanList);
+});
+
+
 module.exports = {
     getNhaXuatBan,
     createNhaXuatBan,
     updateNhaXuatBan,
     deleteNhaXuatBan,
-    getNhaXuatBanById
+    getNhaXuatBanById,
+    findNhaXuatBanByName
 };

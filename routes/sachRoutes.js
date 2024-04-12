@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const {
-    createSach, deleteSach, getSachById, getSachList, updateSach
+    createSach, deleteSach, getSachById, getSachList, updateSach, findSachByName
 } = require('../controllers/sachController');
 
 // Lấy danh sách các sách
@@ -16,5 +16,7 @@ router.put('/:id', updateSach);
 
 // Xóa sách
 router.delete('/:id', deleteSach);
+
+router.get('/search', findSachByName);
 
 module.exports = router;

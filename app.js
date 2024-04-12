@@ -13,6 +13,8 @@ const { notFound } = require('./middleware/notFound.js')
 const sachRouter = require('./routes/sachRoutes.js')
 const connectDB = require('./config/db.js'); // Đường dẫn tới tệp cấu hình DB
 const nhaXuatBanRouter = require('./routes/nhaXuatBanRoutes');
+const uploadRoutes = require('./routes/uploadRoutes.js');
+const docGiaRoutes = require('./routes/docGiaRoutes.js');
 
 dotenv.config()
 
@@ -42,13 +44,13 @@ connectDB();
 app.use('/api/sach', sachRouter);
 app.use('/api/nhaxuatban', nhaXuatBanRouter);
 app.use('/api/theodoidonmuon', nhaXuatBanRouter);
+app.use('/api/docgia', docGiaRoutes);
 
+app.use('/api/upload', uploadRoutes);
 
+const uploadsDirectory = path.join(__dirname, '/uploads');
+app.use('/uploads', express.static(uploadsDirectory));
 
-// app.use('/api/upload', uploadRoutes);
-
-// const __dirname = path.resolve();
-// app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
 
 /*============================== HANDLE ERROR ================================*/
