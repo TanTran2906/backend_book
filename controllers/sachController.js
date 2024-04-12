@@ -1,18 +1,91 @@
-// import asyncHandler from '../middleware/asyncHandler.js';
-const asyncHandler = require('../middleware/asyncHandler.js')
-// import Cabin from '../models/cabinModel.js';
-// import Booking from '../models/bookingModel.js';
-// import AppError from '../middleware/appError.js';
+const Sach = require('../models/sachModel');
+const asyncHandler = require('../middleware/asyncHandler');
+const AppError = require('../middleware/appError');
 
+// Lấy danh sách các sách
+const getSachList = asyncHandler(async (req, res, next) => {
+    const sachList = await Sach.find();
+    res.status(200).json(sachList);
+});
 
-// @desc    Fetch all books
-// @route   GET /api/books
-// @access  Public
-exports.getBooks = asyncHandler(async (req, res, next) => {
-    // const books = await Book.find({});
-    // res.status(200).json(books);
-    res.send('Books')
-})
+// Tạo một sách mới
+const createSach = asyncHandler(async (req, res, next) => {
+    const { TenSach, HinhAnh, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
+
+    // Kiểm tra xem sách đã tồn tại chưa
+    const existingSach = await Sach.findOne({ TenSach, MaNXB, NamXuatBan });
+    if (existingSach) {
+        return next(new AppError('Sách đã tồn tại', 400));
+    }
+
+    // Tạo sách mới
+    const sach = new Sach({ TenSach, HinhAnh, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia });
+    await sach.save();
+
+    res.status(201).json(sach);
+});
+
+// Cập nhật thông tin của một sách
+const updateSach = asyncHandler(async (req, res, next) => {
+    const { id } = req.params;
+    const { TenSach, HinhAnh, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
+
+    // Tìm sách theo mã ID và cập nhật
+    const sach = await Sach.findById(id);
+    if (!sach) {
+        return next(new AppError('Sách không tồn tại', 404));
+    }
+
+    // Cập nhật thông tin sách
+    sach.TenSach = TenSach || sach.TenSach;
+    sach.HinhAnh = HinhAnh || sach.HinhAnh;
+    sach.DonGia = DonGia || sach.DonGia;
+    sach.SoQuyen = SoQuyen || sach.SoQuyen;
+    sach.NamXuatBan = NamXuatBan || sach.NamXuatBan;
+    sach.MaNXB = MaNXB || sach.MaNXB;
+    sach.TacGia = TacGia || sach.TacGia;
+
+    const updatedSach = await sach.save();
+
+    res.status(200).json(updatedSach);
+});
+
+// Xóa một sách
+const deleteSach = asyncHandler(async (req, res, next) => {
+    const { id } = req.params;
+
+    // Tìm và xóa sách theo mã ID
+    const sach = await Sach.findById(id);
+    if (!sach) {
+        return next(new AppError('Sách không tồn tại', 404));
+    }
+
+    await sach.remove();
+    res.status(200).json({ message: 'Sách đã được xóa' });
+});
+
+// Lấy thông tin của một sách theo mã ID
+const getSachById = asyncHandler(async (req, res, next) => {
+    const { id } = req.params;
+
+    // Tìm sách theo mã ID
+    const sach = await Sach.findById(id);
+    if (!sach) {
+        return next(new AppError('Sách không tồn tại', 404));
+    }
+
+    // Trả về thông tin sách
+    res.status(200).json(sach);
+});
+
+module.exports = {
+    getSachList,
+    createSach,
+    updateSach,
+    deleteSach,
+    getSachById
+};
+
 
 // // // @desc    Delete a cabin
 // // // @route   DELETE /api/cabins/:id

@@ -1,0 +1,42 @@
+[
+    {
+        "MaSach": "S001",
+        "TenSach": "Lập Trình Python",
+        "HinhAnh": "https://example.com/images/sach1.jpg",
+        "DonGia": 150000,
+        "SoQuyen": 10,
+        "NamXuatBan": 2021,
+        "MaNXB": "NXB01",
+        "TacGia": "Nguyễn Văn A"
+    },
+    {
+        "MaSach": "S002",
+        "TenSach": "Cơ Sở Dữ Liệu",
+        "HinhAnh": "https://example.com/images/sach2.jpg",
+        "DonGia": 120000,
+        "SoQuyen": 8,
+        "NamXuatBan": 2020,
+        "MaNXB": "NXB02",
+        "TacGia": "Lê Thị B"
+    },
+    {
+        "MaSach": "S003",
+        "TenSach": "Cấu Trúc Dữ Liệu và Giải Thuật",
+        "HinhAnh": "https://example.com/images/sach3.jpg",
+        "DonGia": 180000,
+        "SoQuyen": 12,
+        "NamXuatBan": 2019,
+        "MaNXB": "NXB03",
+        "TacGia": "Trần Văn C"
+    },
+    {
+        "MaSach": "S004",
+        "TenSach": "Học Máy và Trí Tuệ Nhân Tạo",
+        "HinhAnh": "https://example.com/images/sach4.jpg",
+        "DonGia": 200000,
+        "SoQuyen": 7,
+        "NamXuatBan": 2022,
+        "MaNXB": "NXB01",
+        "TacGia": "Phạm Thị D"
+    }
+]

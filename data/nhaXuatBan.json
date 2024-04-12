@@ -1,0 +1,27 @@
+[
+    {
+        "MaNXB": "NXB001",
+        "TenNXB": "Nhà xuất bản Văn Học",
+        "DiaChi": "123 Đường Lê Lợi, Quận 1, TP. HCM"
+    },
+    {
+        "MaNXB": "NXB002",
+        "TenNXB": "Nhà xuất bản Trẻ",
+        "DiaChi": "456 Đường Nguyễn Thị Minh Khai, Quận 3, TP. HCM"
+    },
+    {
+        "MaNXB": "NXB003",
+        "TenNXB": "Nhà xuất bản Kim Đồng",
+        "DiaChi": "789 Đường Lý Thường Kiệt, Quận 10, TP. HCM"
+    },
+    {
+        "MaNXB": "NXB004",
+        "TenNXB": "Nhà xuất bản Giáo Dục",
+        "DiaChi": "101 Đường Hai Bà Trưng, Quận 1, TP. HCM"
+    },
+    {
+        "MaNXB": "NXB005",
+        "TenNXB": "Nhà xuất bản Khoa Học",
+        "DiaChi": "202 Đường Điện Biên Phủ, Quận 5, TP. HCM"
+    }
+]

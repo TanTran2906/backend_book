@@ -1,0 +1,30 @@
+[
+    {
+        "MaDocGia": "DG001",
+        "MaSach": "S001",
+        "TrangThai": "Đã Mượn",
+        "NgayMuon": "2024-04-01T00:00:00Z",
+        "NgayTra": "2024-04-15T00:00:00Z"
+    },
+    {
+        "MaDocGia": "DG002",
+        "MaSach": "S003",
+        "TrangThai": "Đã Trả",
+        "NgayMuon": "2024-03-15T00:00:00Z",
+        "NgayTra": "2024-04-01T00:00:00Z"
+    },
+    {
+        "MaDocGia": "DG001",
+        "MaSach": "S002",
+        "TrangThai": "Đã Mượn",
+        "NgayMuon": "2024-04-05T00:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": "DG003",
+        "MaSach": "S004",
+        "TrangThai": "Đã Trả",
+        "NgayMuon": "2024-03-20T00:00:00Z",
+        "NgayTra": "2024-04-05T00:00:00Z"
+    }
+]

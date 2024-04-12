@@ -1,20 +1,26 @@
 
 const path = require('path')
 const express = require('express')
-// const morgan = require('morgan')
+const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
-// const dotenv = require('dotenv')
+const dotenv = require('dotenv')
+
+
 const AppError = require('./middleware/appError.js')
-// const { errorHandler } = require('./middleware/errorMiddleware.js')
-const booksRouter = require('./routes/bookRoutes')
-// dotenv.config()
+const { errorHandler } = require('./middleware/errorHandle.js')
+const { notFound } = require('./middleware/notFound.js')
+const sachRouter = require('./routes/sachRoutes.js')
+const connectDB = require('./config/db.js'); // Đường dẫn tới tệp cấu hình DB
+const nhaXuatBanRouter = require('./routes/nhaXuatBanRoutes');
+
+dotenv.config()
 
 const app = express()
 
 //Development logging
-// if (process.env.NODE_ENV === "development")
-//     app.use(morgan('dev'))
+if (process.env.NODE_ENV === "development")
+    app.use(morgan('dev'))
 
 //Body parser middleware
 app.use(express.json())
@@ -29,10 +35,15 @@ app.get('/', (req, res) => {
     res.send('API is running...')
 })
 
-
+// Kết nối với MongoDB trước khi khởi động ứng dụng
+connectDB();
 
 /*============================== ROUTES ================================*/
-app.use('/api/books', booksRouter);
+app.use('/api/sach', sachRouter);
+app.use('/api/nhaxuatban', nhaXuatBanRouter);
+app.use('/api/theodoidonmuon', nhaXuatBanRouter);
+
+
 
 // app.use('/api/upload', uploadRoutes);
 
@@ -42,46 +53,10 @@ app.use('/api/books', booksRouter);
 
 /*============================== HANDLE ERROR ================================*/
 
-// //Handling error route
-// app.all('*', (req, res, next) => {
-//     //Truyền đến middleware xử lý lỗi cuối cùng, bỏ qua mọi middleware còn lại
-//     next(new AppError(`Can't find ${req.originalUrl} on this server`, 404))
-// })
+// 404 Not Found handler
+app.use(notFound);
 
-// // //Bắt lỗi mã đồng bộ --> khi một ngoại lệ không được xử lý
-// process.on('uncaughtException', err => {
-//     console.log('UNHANDLED EXCEPTION 🔥 Shutting down...');
-//     console.log(err.name, err.message);
-//     process.exit(1)
-// })
-
-// // //Handling all error
-// app.use(errorHandler)
-
-// // const server = app.listen(port, () => console.log(`Server running on port ${port}`))
-// // //-	Lỗi thường liên quan đến kết nối DB (ví dụ như mật khẩu DB bị sai hoặc bị thay đổi,….)
-// process.on('unhandledRejection', err => {
-//     console.log('UNHANDLED REJECTION 🔥 Shutting down...');
-//     console.log(err.name, err.message);
-//     server.close(() => {
-//         process.exit(1)
-//     })
-// })
-
-// handle 404 response
-app.use((req, res, next) => {
-    // Code ở đây sẽ chạy khi không có route được định nghĩa nào
-    // khớp với yêu cầu. Gọi next() để chuyển sang middleware xử lý lỗi
-    return next(new AppError("Resource not found", 404));
-});
-// define error-handling middleware last, after other app.use() and routes calls
-app.use((err, req, res, next) => {
-    // Middleware xử lý lỗi tập trung.
-    // Trong các đoạn code xử lý ở các route, gọi next(error)
-    // sẽ chuyển về middleware xử lý lỗi này
-    return res.status(err.statusCode || 500).json({
-        message: err.message || "Internal Server Error",
-    });
-});
+// Error handling middleware
+app.use(errorHandler);
 
 module.exports = app
