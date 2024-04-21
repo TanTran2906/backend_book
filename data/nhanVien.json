@@ -1,0 +1,26 @@
+[
+    {
+        "HoTenNV": "Nguyễn Văn A",
+        "Password": "123456",
+        "Chucvu": "Quản lý",
+        "Diachi": "123 Đường ABC, Quận XYZ, TP. HCM",
+        "SoDienThoai": "0901234567",
+        "isAdmin": true
+    },
+    {
+        "HoTenNV": "Trần Thị B",
+        "Password": "123456",
+        "Chucvu": "Nhân viên bán hàng",
+        "Diachi": "456 Đường XYZ, Quận ABC, TP. HCM",
+        "SoDienThoai": "0909876543",
+        "isAdmin": true
+    },
+    {
+        "HoTenNV": "Lê Văn C",
+        "Password": "123456",
+        "Chucvu": "Kế toán",
+        "Diachi": "789 Đường XYZ, Quận ABC, TP. HCM",
+        "SoDienThoai": "0905678901",
+        "isAdmin": true
+    }
+]

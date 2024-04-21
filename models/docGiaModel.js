@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs')
 
 const docGiaSchema = new Schema({
-    MaDocGia: { type: String, required: true, unique: true },
     HoLot: { type: String, required: true },
     Ten: { type: String, required: true },
     NgaySinh: { type: Date, required: true },

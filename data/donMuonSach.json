@@ -1,30 +1,211 @@
 [
     {
-        "MaDocGia": "DG001",
-        "MaSach": "S001",
-        "TrangThai": "Đã Mượn",
-        "NgayMuon": "2024-04-01T00:00:00Z",
-        "NgayTra": "2024-04-15T00:00:00Z"
-    },
-    {
-        "MaDocGia": "DG002",
-        "MaSach": "S003",
-        "TrangThai": "Đã Trả",
-        "NgayMuon": "2024-03-15T00:00:00Z",
-        "NgayTra": "2024-04-01T00:00:00Z"
-    },
-    {
-        "MaDocGia": "DG001",
-        "MaSach": "S002",
-        "TrangThai": "Đã Mượn",
-        "NgayMuon": "2024-04-05T00:00:00Z",
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fb"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec00c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-10T08:00:00Z",
         "NgayTra": null
     },
     {
-        "MaDocGia": "DG003",
-        "MaSach": "S004",
-        "TrangThai": "Đã Trả",
-        "NgayMuon": "2024-03-20T00:00:00Z",
-        "NgayTra": "2024-04-05T00:00:00Z"
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fc"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec01c3fb"
+        },
+        "TrangThai": "Đã trả",
+        "NgayMuon": "2024-04-09T08:00:00Z",
+        "NgayTra": "2024-04-15T08:00:00Z"
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fd"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec02c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-08T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fe"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec03c3fb"
+        },
+        "TrangThai": "Mất",
+        "NgayMuon": "2024-04-07T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3ff"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec04c3fb"
+        },
+        "TrangThai": "Quá hạn",
+        "NgayMuon": "2024-04-06T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c400"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec05c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-05T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c401"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec06c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-04T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c402"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec07c3fb"
+        },
+        "TrangThai": "Đã trả",
+        "NgayMuon": "2024-04-03T08:00:00Z",
+        "NgayTra": "2024-04-10T08:00:00Z"
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c403"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec08c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-02T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fb"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec00c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-10T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fc"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec01c3fb"
+        },
+        "TrangThai": "Đã trả",
+        "NgayMuon": "2024-04-09T08:00:00Z",
+        "NgayTra": "2024-04-15T08:00:00Z"
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fd"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec02c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-08T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3fe"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec03c3fb"
+        },
+        "TrangThai": "Mất",
+        "NgayMuon": "2024-04-07T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c3ff"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec04c3fb"
+        },
+        "TrangThai": "Quá hạn",
+        "NgayMuon": "2024-04-06T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c400"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec05c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-05T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c401"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec06c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-04T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c402"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec07c3fb"
+        },
+        "TrangThai": "Đã trả",
+        "NgayMuon": "2024-04-03T08:00:00Z",
+        "NgayTra": "2024-04-10T08:00:00Z"
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c403"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec08c3fb"
+        },
+        "TrangThai": "Đang mượn",
+        "NgayMuon": "2024-04-02T08:00:00Z",
+        "NgayTra": null
+    },
+    {
+        "MaDocGia": {
+            "$oid": "611ecb52f2683649ec28c404"
+        },
+        "MaSach": {
+            "$oid": "611ecb52f2683649ec09c3fb"
+        },
+        "TrangThai": "Mất",
+        "NgayMuon": "2024-04-01T08:00:00Z",
+        "NgayTra": null
     }
 ]

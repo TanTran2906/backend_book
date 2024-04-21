@@ -1,0 +1,47 @@
+[
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec28c3fb"
+        },
+        "HoLot": "Nguyễn",
+        "Ten": "Văn A",
+        "NgaySinh": "1990-05-15",
+        "Phai": "Nam",
+        "DiaChi": "123 Đường ABC, Quận XYZ, TP. HCM",
+        "DienThoai": "0901234567",
+        "Password": "123456",
+        "PasswordResetToken": null,
+        "PasswordResetExpires": null,
+        "isAdmin": false
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec28c3fc"
+        },
+        "HoLot": "Trần",
+        "Ten": "Thị B",
+        "NgaySinh": "1985-10-25",
+        "Phai": "Nữ",
+        "DiaChi": "456 Đường XYZ, Quận ABC, TP. HCM",
+        "DienThoai": "0909876543",
+        "Password": "123456",
+        "PasswordResetToken": null,
+        "PasswordResetExpires": null,
+        "isAdmin": false
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec28c3fd"
+        },
+        "HoLot": "Lê",
+        "Ten": "Văn C",
+        "NgaySinh": "1993-03-12",
+        "Phai": "Nam",
+        "DiaChi": "789 Đường XYZ, Quận ABC, TP. HCM",
+        "DienThoai": "0905678901",
+        "Password": "123456",
+        "PasswordResetToken": null,
+        "PasswordResetExpires": null,
+        "isAdmin": false
+    }
+]

@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const sachSchema = new Schema({
-    MaSach: { type: String, required: true, unique: true },
     TenSach: { type: String, required: true },
     HinhAnh: { type: String },
     DonGia: { type: Number, required: true },

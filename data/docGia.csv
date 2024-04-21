@@ -1,0 +1,4 @@
+_id,HoLot,Ten,NgaySinh,Phai,DiaChi,DienThoai,Password,PasswordResetToken,PasswordResetExpires,isAdmin
+611ecb52f2683649ec28c3fb,Nguyễn,Văn A,1990-05-15,Nam,"123 Đường ABC, Quận XYZ, TP. HCM",0901234567,123456,,,false
+611ecb52f2683649ec28c3fc,Trần,Thị B,1985-10-25,Nữ,"456 Đường XYZ, Quận ABC, TP. HCM",0909876543,123456,,,false
+611ecb52f2683649ec28c3fd,Lê,Văn C,1993-03-12,Nam,"789 Đường XYZ, Quận ABC, TP. HCM",0905678901,123456,,,false

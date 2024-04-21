@@ -1,42 +1,282 @@
 [
     {
-        "MaSach": "S001",
+        "_id": {
+            "$oid": "611ecb52f2683649ec00c3fb"
+        },
         "TenSach": "Lập Trình Python",
-        "HinhAnh": "https://example.com/images/sach1.jpg",
+        "HinhAnh": "/uploads/sach-01.jpg",
         "DonGia": 150000,
         "SoQuyen": 10,
         "NamXuatBan": 2021,
-        "MaNXB": "NXB01",
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5175"
+        },
         "TacGia": "Nguyễn Văn A"
     },
     {
-        "MaSach": "S002",
+        "_id": {
+            "$oid": "611ecb52f2683649ec01c3fb"
+        },
         "TenSach": "Cơ Sở Dữ Liệu",
-        "HinhAnh": "https://example.com/images/sach2.jpg",
+        "HinhAnh": "/uploads/sach-02.jpg",
         "DonGia": 120000,
         "SoQuyen": 8,
         "NamXuatBan": 2020,
-        "MaNXB": "NXB02",
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5176"
+        },
         "TacGia": "Lê Thị B"
     },
     {
-        "MaSach": "S003",
+        "_id": {
+            "$oid": "611ecb52f2683649ec02c3fb"
+        },
         "TenSach": "Cấu Trúc Dữ Liệu và Giải Thuật",
-        "HinhAnh": "https://example.com/images/sach3.jpg",
+        "HinhAnh": "/uploads/sach-03.jpg",
         "DonGia": 180000,
         "SoQuyen": 12,
         "NamXuatBan": 2019,
-        "MaNXB": "NXB03",
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5177"
+        },
         "TacGia": "Trần Văn C"
     },
     {
-        "MaSach": "S004",
+        "_id": {
+            "$oid": "611ecb52f2683649ec03c3fb"
+        },
         "TenSach": "Học Máy và Trí Tuệ Nhân Tạo",
-        "HinhAnh": "https://example.com/images/sach4.jpg",
+        "HinhAnh": "/uploads/sach-04.jpg",
         "DonGia": 200000,
         "SoQuyen": 7,
         "NamXuatBan": 2022,
-        "MaNXB": "NXB01",
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5175"
+        },
         "TacGia": "Phạm Thị D"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec04c3fb"
+        },
+        "TenSach": "Digital Marketing 101",
+        "HinhAnh": "/uploads/sach-05.jpg",
+        "DonGia": 160000,
+        "SoQuyen": 5,
+        "NamXuatBan": 2021,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TacGia": "Nguyễn Thị E"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec05c3fb"
+        },
+        "TenSach": "Kỹ Năng Bán Hàng Hiệu Quả",
+        "HinhAnh": "/uploads/sach-06.jpg",
+        "DonGia": 140000,
+        "SoQuyen": 9,
+        "NamXuatBan": 2020,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a517b"
+        },
+        "TacGia": "Trần Văn F"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec06c3fb"
+        },
+        "TenSach": "Marketing Chiến Lược",
+        "HinhAnh": "/uploads/sach-07.jpg",
+        "DonGia": 170000,
+        "SoQuyen": 6,
+        "NamXuatBan": 2019,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TacGia": "Lê Thị G"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec07c3fb"
+        },
+        "TenSach": "Quảng Cáo Truyền Thông",
+        "HinhAnh": "/uploads/sach-08.jpg",
+        "DonGia": 190000,
+        "SoQuyen": 8,
+        "NamXuatBan": 2022,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a517b"
+        },
+        "TacGia": "Phạm Văn H"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec08c3fb"
+        },
+        "TenSach": "Tâm Lý Học Thị Trường",
+        "HinhAnh": "/uploads/sach-09.jpg",
+        "DonGia": 175000,
+        "SoQuyen": 7,
+        "NamXuatBan": 2021,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TacGia": "Nguyễn Văn I"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec09c3fb"
+        },
+        "TenSach": "Marketing Mạng Xã Hội",
+        "HinhAnh": "/uploads/sach-10.jpg",
+        "DonGia": 155000,
+        "SoQuyen": 10,
+        "NamXuatBan": 2020,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TacGia": "Trần Thị K"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec10c3fb"
+        },
+        "TenSach": "Bí Quyết Bán Hàng Online",
+        "HinhAnh": "/uploads/sach-11.jpg",
+        "DonGia": 165000,
+        "SoQuyen": 8,
+        "NamXuatBan": 2019,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TacGia": "Lê Văn L"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec11c3fb"
+        },
+        "TenSach": "Marketing Nội Dung",
+        "HinhAnh": "/uploads/sach-12.jpg",
+        "DonGia": 180000,
+        "SoQuyen": 6,
+        "NamXuatBan": 2022,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TacGia": "Phạm Thị M"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec12c3fb"
+        },
+        "TenSach": "Sức Mạnh Tư Duy",
+        "HinhAnh": "/uploads/sach-13.jpg",
+        "DonGia": 175000,
+        "SoQuyen": 9,
+        "NamXuatBan": 2021,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5175"
+        },
+        "TacGia": "Nguyễn Văn N"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec13c3fb"
+        },
+        "TenSach": "Kinh Doanh Thành Công",
+        "HinhAnh": "/uploads/sach-14.jpg",
+        "DonGia": 195000,
+        "SoQuyen": 7,
+        "NamXuatBan": 2020,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5176"
+        },
+        "TacGia": "Trần Thị O"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec14c3fb"
+        },
+        "TenSach": "Quản Trị Kinh Doanh",
+        "HinhAnh": "/uploads/sach-15.jpg",
+        "DonGia": 185000,
+        "SoQuyen": 8,
+        "NamXuatBan": 2019,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5177"
+        },
+        "TacGia": "Lê Văn P"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec15c3fb"
+        },
+        "TenSach": "Khởi Nghiệp Sáng Tạo",
+        "HinhAnh": "/uploads/sach-16.jpg",
+        "DonGia": 210000,
+        "SoQuyen": 6,
+        "NamXuatBan": 2022,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5175"
+        },
+        "TacGia": "Phạm Thị Q"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec16c3fb"
+        },
+        "TenSach": "Tư Duy Sáng Tạo",
+        "HinhAnh": "/uploads/sach-17.jpg",
+        "DonGia": 160000,
+        "SoQuyen": 10,
+        "NamXuatBan": 2021,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5176"
+        },
+        "TacGia": "Nguyễn Văn R"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec17c3fb"
+        },
+        "TenSach": "Bí Mật Tiếp Thị",
+        "HinhAnh": "/uploads/sach-18.jpg",
+        "DonGia": 170000,
+        "SoQuyen": 8,
+        "NamXuatBan": 2020,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5177"
+        },
+        "TacGia": "Trần Thị S"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec18c3fb"
+        },
+        "TenSach": "Nghệ Thuật Bán Hàng",
+        "HinhAnh": "/uploads/sach-19.jpg",
+        "DonGia": 190000,
+        "SoQuyen": 7,
+        "NamXuatBan": 2019,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5175"
+        },
+        "TacGia": "Lê Văn T"
+    },
+    {
+        "_id": {
+            "$oid": "611ecb52f2683649ec19c3fb"
+        },
+        "TenSach": "Chinh Phục Thị Trường",
+        "HinhAnh": "/uploads/sach-20.jpg",
+        "DonGia": 180000,
+        "SoQuyen": 6,
+        "NamXuatBan": 2022,
+        "MaNXB": {
+            "$oid": "6624d5acfe234665639a5176"
+        },
+        "TacGia": "Phạm Thị U"
     }
 ]

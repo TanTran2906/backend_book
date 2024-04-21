@@ -1,0 +1,4 @@
+_id,HoTenNV,Password,Chucvu,Diachi,SoDienThoai,isAdmin
+66254985fe234665639a51e8,Nguyễn Văn A,123456,Quản lý,"123 Đường ABC, Quận XYZ, TP. HCM",0901234567,true
+66254985fe234665639a51e9,Trần Thị B,123456,Nhân viên bán hàng,"456 Đường XYZ, Quận ABC, TP. HCM",0909876543,true
+66254985fe234665639a51ea,Lê Văn C,123456,Kế toán,"789 Đường XYZ, Quận ABC, TP. HCM",0905678901,true

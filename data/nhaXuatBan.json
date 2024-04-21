@@ -1,27 +1,142 @@
 [
     {
-        "MaNXB": "NXB001",
+        "_id": {
+            "$oid": "6624d5acfe234665639a5175"
+        },
         "TenNXB": "Nhà xuất bản Văn Học",
         "DiaChi": "123 Đường Lê Lợi, Quận 1, TP. HCM"
     },
     {
-        "MaNXB": "NXB002",
+        "_id": {
+            "$oid": "6624d5acfe234665639a5176"
+        },
         "TenNXB": "Nhà xuất bản Trẻ",
         "DiaChi": "456 Đường Nguyễn Thị Minh Khai, Quận 3, TP. HCM"
     },
     {
-        "MaNXB": "NXB003",
+        "_id": {
+            "$oid": "6624d5acfe234665639a5177"
+        },
         "TenNXB": "Nhà xuất bản Kim Đồng",
         "DiaChi": "789 Đường Lý Thường Kiệt, Quận 10, TP. HCM"
     },
     {
-        "MaNXB": "NXB004",
+        "_id": {
+            "$oid": "6624d5acfe234665639a5178"
+        },
         "TenNXB": "Nhà xuất bản Giáo Dục",
         "DiaChi": "101 Đường Hai Bà Trưng, Quận 1, TP. HCM"
     },
     {
-        "MaNXB": "NXB005",
+        "_id": {
+            "$oid": "6624d5acfe234665639a5179"
+        },
         "TenNXB": "Nhà xuất bản Khoa Học",
         "DiaChi": "202 Đường Điện Biên Phủ, Quận 5, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a517a"
+        },
+        "TenNXB": "Nhà xuất bản Tiếp Thị",
+        "DiaChi": "303 Đường Cách Mạng Tháng Tám, Quận 3, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a517b"
+        },
+        "TenNXB": "Nhà xuất bản Quảng Cáo",
+        "DiaChi": "404 Đường Bà Huyện Thanh Quan, Quận 1, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a517c"
+        },
+        "TenNXB": "Nhà xuất bản Bán Hàng",
+        "DiaChi": "505 Đường Nguyễn Công Trứ, Quận 5, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a517d"
+        },
+        "TenNXB": "Nhà xuất bản Thương Mại",
+        "DiaChi": "606 Đường Lê Thánh Tôn, Quận 1, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a517e"
+        },
+        "TenNXB": "Nhà xuất bản Sản Xuất",
+        "DiaChi": "707 Đường Hai Bà Trưng, Quận 3, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a517f"
+        },
+        "TenNXB": "Nhà xuất bản Kinh Doanh",
+        "DiaChi": "808 Đường Nguyễn Huệ, Quận 5, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5180"
+        },
+        "TenNXB": "Nhà xuất bản Marketing",
+        "DiaChi": "909 Đường Phạm Ngũ Lão, Quận 10, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5181"
+        },
+        "TenNXB": "Nhà xuất bản Bán Lẻ",
+        "DiaChi": "1010 Đường Lê Lai, Quận 1, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5182"
+        },
+        "TenNXB": "Nhà xuất bản Dịch Vụ",
+        "DiaChi": "1111 Đường Trần Hưng Đạo, Quận 3, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5183"
+        },
+        "TenNXB": "Nhà xuất bản Tiếp Thị Trực Tuyến",
+        "DiaChi": "1212 Đường Võ Văn Tần, Quận 5, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5184"
+        },
+        "TenNXB": "Nhà xuất bản Kỹ Thuật Bán Hàng",
+        "DiaChi": "1313 Đường Nguyễn Thị Diệu, Quận 10, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5185"
+        },
+        "TenNXB": "Nhà xuất bản Quảng Cáo Thương Hiệu",
+        "DiaChi": "1414 Đường Lý Tự Trọng, Quận 1, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5186"
+        },
+        "TenNXB": "Nhà xuất bản Tư Vấn Kinh Doanh",
+        "DiaChi": "1515 Đường Nguyễn Trãi, Quận 3, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5187"
+        },
+        "TenNXB": "Nhà xuất bản Đào Tạo Bán Hàng",
+        "DiaChi": "1616 Đường Phan Đình Phùng, Quận 5, TP. HCM"
+    },
+    {
+        "_id": {
+            "$oid": "6624d5acfe234665639a5188"
+        },
+        "TenNXB": "Nhà xuất bản Tìm Kiếm Thị Trường",
+        "DiaChi": "1717 Đường Bùi Viện, Quận 10, TP. HCM"
     }
 ]
