@@ -1,21 +1,21 @@
-_id,TenSach,HinhAnh,DonGia,SoQuyen,NamXuatBan,MaNXB,TacGia
-611ecb52f2683649ec00c3fb,Lập Trình Python,/uploads/sach-01.jpg,150000,10,2021,6624d5acfe234665639a5175,Nguyễn Văn A
-611ecb52f2683649ec01c3fb,Cơ Sở Dữ Liệu,/uploads/sach-02.jpg,120000,8,2020,6624d5acfe234665639a5176,Lê Thị B
-611ecb52f2683649ec02c3fb,Cấu Trúc Dữ Liệu và Giải Thuật,/uploads/sach-03.jpg,180000,12,2019,6624d5acfe234665639a5177,Trần Văn C
-611ecb52f2683649ec03c3fb,Học Máy và Trí Tuệ Nhân Tạo,/uploads/sach-04.jpg,200000,7,2022,6624d5acfe234665639a5175,Phạm Thị D
-611ecb52f2683649ec04c3fb,Digital Marketing 101,/uploads/sach-05.jpg,160000,5,2021,6624d5acfe234665639a5180,Nguyễn Thị E
-611ecb52f2683649ec05c3fb,Kỹ Năng Bán Hàng Hiệu Quả,/uploads/sach-06.jpg,140000,9,2020,6624d5acfe234665639a517b,Trần Văn F
-611ecb52f2683649ec06c3fb,Marketing Chiến Lược,/uploads/sach-07.jpg,170000,6,2019,6624d5acfe234665639a5180,Lê Thị G
-611ecb52f2683649ec07c3fb,Quảng Cáo Truyền Thông,/uploads/sach-08.jpg,190000,8,2022,6624d5acfe234665639a517b,Phạm Văn H
-611ecb52f2683649ec08c3fb,Tâm Lý Học Thị Trường,/uploads/sach-09.jpg,175000,7,2021,6624d5acfe234665639a5180,Nguyễn Văn I
-611ecb52f2683649ec09c3fb,Marketing Mạng Xã Hội,/uploads/sach-10.jpg,155000,10,2020,6624d5acfe234665639a5180,Trần Thị K
-611ecb52f2683649ec10c3fb,Bí Quyết Bán Hàng Online,/uploads/sach-11.jpg,165000,8,2019,6624d5acfe234665639a5180,Lê Văn L
-611ecb52f2683649ec11c3fb,Marketing Nội Dung,/uploads/sach-12.jpg,180000,6,2022,6624d5acfe234665639a5180,Phạm Thị M
-611ecb52f2683649ec12c3fb,Sức Mạnh Tư Duy,/uploads/sach-13.jpg,175000,9,2021,6624d5acfe234665639a5175,Nguyễn Văn N
-611ecb52f2683649ec13c3fb,Kinh Doanh Thành Công,/uploads/sach-14.jpg,195000,7,2020,6624d5acfe234665639a5176,Trần Thị O
-611ecb52f2683649ec14c3fb,Quản Trị Kinh Doanh,/uploads/sach-15.jpg,185000,8,2019,6624d5acfe234665639a5177,Lê Văn P
-611ecb52f2683649ec15c3fb,Khởi Nghiệp Sáng Tạo,/uploads/sach-16.jpg,210000,6,2022,6624d5acfe234665639a5175,Phạm Thị Q
-611ecb52f2683649ec16c3fb,Tư Duy Sáng Tạo,/uploads/sach-17.jpg,160000,10,2021,6624d5acfe234665639a5176,Nguyễn Văn R
-611ecb52f2683649ec17c3fb,Bí Mật Tiếp Thị,/uploads/sach-18.jpg,170000,8,2020,6624d5acfe234665639a5177,Trần Thị S
-611ecb52f2683649ec18c3fb,Nghệ Thuật Bán Hàng,/uploads/sach-19.jpg,190000,7,2019,6624d5acfe234665639a5175,Lê Văn T
-611ecb52f2683649ec19c3fb,Chinh Phục Thị Trường,/uploads/sach-20.jpg,180000,6,2022,6624d5acfe234665639a5176,Phạm Thị U
+_id,TenSach,HinhAnh,DonGia,SoQuyen,NamXuatBan,MaNXB,TacGia,size
+611ecb52f2683649ec00c3fb,Kinh Doanh Trực Tuyến,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805523/some-folder-name/image_1713805520124.jpg,150000,10,2021,6624d5acfe234665639a5175,Nguyễn Văn A,
+611ecb52f2683649ec01c3fb,Bán Hàng Bậc Cao,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805540/some-folder-name/image_1713805536759.jpg,120000,8,2020,6624d5acfe234665639a5176,Lê Thị B,
+611ecb52f2683649ec02c3fb,Nghệ Thuật Lấy Lòng Khách Hàng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713804968/some-folder-name/image_sach-03.jpg.jpg,180000,12,2019,6624d5acfe234665639a5177,Trần Văn C,
+611ecb52f2683649ec03c3fb,PR là Sống,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713804997/some-folder-name/image_sach-04.jpg.jpg,200000,7,2022,6624d5acfe234665639a5175,Phạm Thị D,
+611ecb52f2683649ec04c3fb,Biến Bất Kỳ Ai Thành Khách Hàng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805017/some-folder-name/image_sach-05.jpg.jpg,160000,5,2021,6624d5acfe234665639a5180,Nguyễn Thị E,
+611ecb52f2683649ec05c3fb,Bán Hàng Thông Minh,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805055/some-folder-name/image_sach-06.jpg.jpg,140000,9,2020,6624d5acfe234665639a517b,Trần Văn F,
+611ecb52f2683649ec06c3fb,Hãy Suy Nghĩ Tựa Người Mua,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805075/some-folder-name/image_sach-07.jpg.jpg,170000,6,2019,6624d5acfe234665639a5180,Lê Thị G,
+611ecb52f2683649ec07c3fb,Tăng Tốc Bán Hàng Bằng Spin,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805100/some-folder-name/image_sach-08.jpg.jpg,190000,8,2022,6624d5acfe234665639a517b,Phạm Văn H,
+611ecb52f2683649ec08c3fb,Tấn Công Tâm Lý Trong Bán Lẻ,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805208/some-folder-name/image_1713805206010.jpg,175000,7,2021,6624d5acfe234665639a5180,Nguyễn Văn I,
+611ecb52f2683649ec09c3fb,Xì Xầm vs Hét To,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805237/some-folder-name/image_1713805235047.jpg,155000,10,2020,6624d5acfe234665639a5180,Trần Thị K,
+611ecb52f2683649ec10c3fb,Quảng Cáo và Khoa Học Quảng Cáo,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805260/some-folder-name/image_1713805257769.jpg,165000,8,2019,6624d5acfe234665639a5180,Lê Văn L,21698
+611ecb52f2683649ec11c3fb,Những Chiêu Tiếp Thị Ngược Đời,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805282/some-folder-name/image_1713805279735.jpg,180000,6,2022,6624d5acfe234665639a5180,Phạm Thị M,
+611ecb52f2683649ec12c3fb,Quảng Cáo và Tâm Trí Người Tiêu Dùng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805308/some-folder-name/image_1713805305794.jpg,175000,9,2021,6624d5acfe234665639a5175,Nguyễn Văn N,
+611ecb52f2683649ec13c3fb,Bí Quyết Thành Công,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805328/some-folder-name/image_1713805326251.jpg,195000,7,2020,6624d5acfe234665639a5176,Trần Thị O,
+611ecb52f2683649ec14c3fb,Bí Kiếp Chinh Phục Khách Hàng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805346/some-folder-name/image_1713805343952.jpg,185000,8,2019,6624d5acfe234665639a5177,Lê Văn P,
+611ecb52f2683649ec15c3fb,Marketing Truyền Miệng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805364/some-folder-name/image_1713805361732.jpg,210000,6,2022,6624d5acfe234665639a5175,Phạm Thị Q,
+611ecb52f2683649ec16c3fb,Bán Hàng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805384/some-folder-name/image_1713805382110.jpg,160000,10,2021,6624d5acfe234665639a5176,Nguyễn Văn R,
+611ecb52f2683649ec17c3fb,Nghệ Thuật Chinh Phục Khách Hàng,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805402/some-folder-name/image_1713805400073.jpg,170000,8,2020,6624d5acfe234665639a5177,Trần Thị S,
+611ecb52f2683649ec18c3fb,Marketing Đột Phá,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805422/some-folder-name/image_1713805420189.jpg,190000,7,2019,6624d5acfe234665639a5175,Lê Văn T,
+611ecb52f2683649ec19c3fb,Vua Bán Lẻ,https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805447/some-folder-name/image_1713805444655.jpg,180000,6,2022,6624d5acfe234665639a5176,Phạm Thị U,

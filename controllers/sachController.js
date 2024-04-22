@@ -3,9 +3,35 @@ const asyncHandler = require('../middleware/asyncHandler');
 const AppError = require('../middleware/appError');
 const TheoDoiMuonSach = require('../models/donMuonModel');
 
+const SachService = require("../services/sach.service");
+const MongoDB = require("../utils/mongodb");
+
+
+// Retrieve all contacts of a user from the database
+const findAll = async (req, res, next) => {
+    let documents = [];
+
+    try {
+        const sachService = new SachService(MongoDB.client);
+        const { name } = req.query;
+        if (name) {
+            documents = await sachService.findByName(name);
+        } else {
+            documents = await sachService.find({});
+        }
+    } catch (error) {
+        return next(new AppError('Sách không tồn tại', 404));
+    }
+    res.status(200).json(documents);
+}
+
+
+
+
 // Lấy danh sách các sách
 const getSachList = asyncHandler(async (req, res, next) => {
-    const sachList = await Sach.find();
+    const sachList = await Sach.find({});
+    console.log(sachList)
     res.status(200).json(sachList);
 });
 
@@ -123,7 +149,8 @@ module.exports = {
     updateSach,
     deleteSach,
     getSachById,
-    findSachByName
+    findSachByName,
+    findAll
 };
 
 

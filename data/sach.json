@@ -3,8 +3,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec00c3fb"
         },
-        "TenSach": "Lập Trình Python",
-        "HinhAnh": "/uploads/sach-01.jpg",
+        "TenSach": "Kinh Doanh Trực Tuyến",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805523/some-folder-name/image_1713805520124.jpg",
         "DonGia": 150000,
         "SoQuyen": 10,
         "NamXuatBan": 2021,
@@ -17,8 +17,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec01c3fb"
         },
-        "TenSach": "Cơ Sở Dữ Liệu",
-        "HinhAnh": "/uploads/sach-02.jpg",
+        "TenSach": "Bán Hàng Bậc Cao",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805540/some-folder-name/image_1713805536759.jpg",
         "DonGia": 120000,
         "SoQuyen": 8,
         "NamXuatBan": 2020,
@@ -31,8 +31,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec02c3fb"
         },
-        "TenSach": "Cấu Trúc Dữ Liệu và Giải Thuật",
-        "HinhAnh": "/uploads/sach-03.jpg",
+        "TenSach": "Nghệ Thuật Lấy Lòng Khách Hàng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713804968/some-folder-name/image_sach-03.jpg.jpg",
         "DonGia": 180000,
         "SoQuyen": 12,
         "NamXuatBan": 2019,
@@ -45,8 +45,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec03c3fb"
         },
-        "TenSach": "Học Máy và Trí Tuệ Nhân Tạo",
-        "HinhAnh": "/uploads/sach-04.jpg",
+        "TenSach": "PR là Sống",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713804997/some-folder-name/image_sach-04.jpg.jpg",
         "DonGia": 200000,
         "SoQuyen": 7,
         "NamXuatBan": 2022,
@@ -59,8 +59,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec04c3fb"
         },
-        "TenSach": "Digital Marketing 101",
-        "HinhAnh": "/uploads/sach-05.jpg",
+        "TenSach": "Biến Bất Kỳ Ai Thành Khách Hàng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805017/some-folder-name/image_sach-05.jpg.jpg",
         "DonGia": 160000,
         "SoQuyen": 5,
         "NamXuatBan": 2021,
@@ -73,8 +73,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec05c3fb"
         },
-        "TenSach": "Kỹ Năng Bán Hàng Hiệu Quả",
-        "HinhAnh": "/uploads/sach-06.jpg",
+        "TenSach": "Bán Hàng Thông Minh",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805055/some-folder-name/image_sach-06.jpg.jpg",
         "DonGia": 140000,
         "SoQuyen": 9,
         "NamXuatBan": 2020,
@@ -87,8 +87,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec06c3fb"
         },
-        "TenSach": "Marketing Chiến Lược",
-        "HinhAnh": "/uploads/sach-07.jpg",
+        "TenSach": "Hãy Suy Nghĩ Tựa Người Mua",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805075/some-folder-name/image_sach-07.jpg.jpg",
         "DonGia": 170000,
         "SoQuyen": 6,
         "NamXuatBan": 2019,
@@ -101,8 +101,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec07c3fb"
         },
-        "TenSach": "Quảng Cáo Truyền Thông",
-        "HinhAnh": "/uploads/sach-08.jpg",
+        "TenSach": "Tăng Tốc Bán Hàng Bằng Spin",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805100/some-folder-name/image_sach-08.jpg.jpg",
         "DonGia": 190000,
         "SoQuyen": 8,
         "NamXuatBan": 2022,
@@ -115,8 +115,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec08c3fb"
         },
-        "TenSach": "Tâm Lý Học Thị Trường",
-        "HinhAnh": "/uploads/sach-09.jpg",
+        "TenSach": "Tấn Công Tâm Lý Trong Bán Lẻ",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805208/some-folder-name/image_1713805206010.jpg",
         "DonGia": 175000,
         "SoQuyen": 7,
         "NamXuatBan": 2021,
@@ -129,8 +129,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec09c3fb"
         },
-        "TenSach": "Marketing Mạng Xã Hội",
-        "HinhAnh": "/uploads/sach-10.jpg",
+        "TenSach": "Xì Xầm vs Hét To",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805237/some-folder-name/image_1713805235047.jpg",
         "DonGia": 155000,
         "SoQuyen": 10,
         "NamXuatBan": 2020,
@@ -143,8 +143,9 @@
         "_id": {
             "$oid": "611ecb52f2683649ec10c3fb"
         },
-        "TenSach": "Bí Quyết Bán Hàng Online",
-        "HinhAnh": "/uploads/sach-11.jpg",
+        "TenSach": "Quảng Cáo và Khoa Học Quảng Cáo",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805260/some-folder-name/image_1713805257769.jpg",
+        "size": 21698,
         "DonGia": 165000,
         "SoQuyen": 8,
         "NamXuatBan": 2019,
@@ -157,8 +158,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec11c3fb"
         },
-        "TenSach": "Marketing Nội Dung",
-        "HinhAnh": "/uploads/sach-12.jpg",
+        "TenSach": "Những Chiêu Tiếp Thị Ngược Đời",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805282/some-folder-name/image_1713805279735.jpg",
         "DonGia": 180000,
         "SoQuyen": 6,
         "NamXuatBan": 2022,
@@ -171,8 +172,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec12c3fb"
         },
-        "TenSach": "Sức Mạnh Tư Duy",
-        "HinhAnh": "/uploads/sach-13.jpg",
+        "TenSach": "Quảng Cáo và Tâm Trí Người Tiêu Dùng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805308/some-folder-name/image_1713805305794.jpg",
         "DonGia": 175000,
         "SoQuyen": 9,
         "NamXuatBan": 2021,
@@ -185,8 +186,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec13c3fb"
         },
-        "TenSach": "Kinh Doanh Thành Công",
-        "HinhAnh": "/uploads/sach-14.jpg",
+        "TenSach": "Bí Quyết Thành Công",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805328/some-folder-name/image_1713805326251.jpg",
         "DonGia": 195000,
         "SoQuyen": 7,
         "NamXuatBan": 2020,
@@ -199,8 +200,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec14c3fb"
         },
-        "TenSach": "Quản Trị Kinh Doanh",
-        "HinhAnh": "/uploads/sach-15.jpg",
+        "TenSach": "Bí Kiếp Chinh Phục Khách Hàng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805346/some-folder-name/image_1713805343952.jpg",
         "DonGia": 185000,
         "SoQuyen": 8,
         "NamXuatBan": 2019,
@@ -213,8 +214,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec15c3fb"
         },
-        "TenSach": "Khởi Nghiệp Sáng Tạo",
-        "HinhAnh": "/uploads/sach-16.jpg",
+        "TenSach": "Marketing Truyền Miệng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805364/some-folder-name/image_1713805361732.jpg",
         "DonGia": 210000,
         "SoQuyen": 6,
         "NamXuatBan": 2022,
@@ -227,8 +228,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec16c3fb"
         },
-        "TenSach": "Tư Duy Sáng Tạo",
-        "HinhAnh": "/uploads/sach-17.jpg",
+        "TenSach": "Bán Hàng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805384/some-folder-name/image_1713805382110.jpg",
         "DonGia": 160000,
         "SoQuyen": 10,
         "NamXuatBan": 2021,
@@ -241,8 +242,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec17c3fb"
         },
-        "TenSach": "Bí Mật Tiếp Thị",
-        "HinhAnh": "/uploads/sach-18.jpg",
+        "TenSach": "Nghệ Thuật Chinh Phục Khách Hàng",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805402/some-folder-name/image_1713805400073.jpg",
         "DonGia": 170000,
         "SoQuyen": 8,
         "NamXuatBan": 2020,
@@ -255,8 +256,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec18c3fb"
         },
-        "TenSach": "Nghệ Thuật Bán Hàng",
-        "HinhAnh": "/uploads/sach-19.jpg",
+        "TenSach": "Marketing Đột Phá",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805422/some-folder-name/image_1713805420189.jpg",
         "DonGia": 190000,
         "SoQuyen": 7,
         "NamXuatBan": 2019,
@@ -269,8 +270,8 @@
         "_id": {
             "$oid": "611ecb52f2683649ec19c3fb"
         },
-        "TenSach": "Chinh Phục Thị Trường",
-        "HinhAnh": "/uploads/sach-20.jpg",
+        "TenSach": "Vua Bán Lẻ",
+        "HinhAnh": "https://res.cloudinary.com/dvefzyfgd/image/upload/v1713805447/some-folder-name/image_1713805444655.jpg",
         "DonGia": 180000,
         "SoQuyen": 6,
         "NamXuatBan": 2022,

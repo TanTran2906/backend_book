@@ -5,7 +5,8 @@ const morgan = require('morgan')
 const cookieParser = require('cookie-parser')
 const cors = require('cors')
 const dotenv = require('dotenv')
-
+const multer = require('multer')
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
 
 const AppError = require('./middleware/appError.js')
 const { errorHandler } = require('./middleware/errorHandle.js')
@@ -15,6 +16,7 @@ const connectDB = require('./config/db.js'); // Đường dẫn tới tệp cấ
 const nhaXuatBanRouter = require('./routes/nhaXuatBanRoutes');
 const uploadRoutes = require('./routes/uploadRoutes.js');
 const docGiaRoutes = require('./routes/docGiaRoutes.js');
+const cloudinary = require('./config/cloudinary.js')
 
 dotenv.config()
 
@@ -38,18 +40,35 @@ app.get('/', (req, res) => {
 })
 
 // Kết nối với MongoDB trước khi khởi động ứng dụng
-connectDB();
+// connectDB();
 
 /*============================== ROUTES ================================*/
 app.use('/api/sach', sachRouter);
 app.use('/api/nhaxuatban', nhaXuatBanRouter);
-app.use('/api/theodoidonmuon', nhaXuatBanRouter);
+// app.use('/api/theodoidonmuon', nhaXuatBanRouter);
 app.use('/api/docgia', docGiaRoutes);
 
-app.use('/api/upload', uploadRoutes);
+// app.use('/api/upload', uploadRoutes);
 
-const uploadsDirectory = path.join(__dirname, '/uploads');
-app.use('/uploads', express.static(uploadsDirectory));
+// const uploadsDirectory = path.join(__dirname, '/uploads');
+// app.use('/uploads', express.static(uploadsDirectory));
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: 'some-folder-name',
+        format: async (req, file) => 'jpg', // supports promises as well
+        public_id: (req, file) => `image_${Date.now()}`,
+
+    },
+
+});
+const parser = multer({ storage: storage });
+
+app.post('/upload', parser.fields([{ name: "img", maxCount: 1 }]), function (req, res) {
+    const link_img = req.files['img'][0];
+    res.send(link_img)
+});
+
 
 
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Đường dẫn tới cơ sở dữ liệu MongoDB
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/book';
+const MONGO_URI = 'mongodb://127.0.0.1:27017/QL_Sach' || process.env.MONGODB_URI;
 
 // Hàm để kết nối với MongoDB
 const connectDB = async () => {
