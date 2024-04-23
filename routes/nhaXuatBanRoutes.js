@@ -1,27 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const {
-    getNhaXuatBan,
-    createNhaXuatBan,
-    updateNhaXuatBan,
-    deleteNhaXuatBan,
-    getNhaXuatBanById,
-    findNhaXuatBanByName
+    findAll, updateNhaXuatBan, deleteNhaXuatBan
 } = require('../controllers/nhaXuatBanController');
 
 // Lấy danh sách các nhà xuất bản
-router.get('/', getNhaXuatBan);
-router.get('/:id', getNhaXuatBanById);
+router.route("/")
+    .get(findAll)
 
-// Tạo nhà xuất bản mới
-router.post('/', createNhaXuatBan);
-
-// Cập nhật thông tin nhà xuất bản
-router.put('/:id', updateNhaXuatBan);
-
-// Xóa nhà xuất bản
-router.delete('/:id', deleteNhaXuatBan);
-
-router.get('/search', findNhaXuatBanByName);
-
+router.route("/:id")
+    .delete(updateNhaXuatBan)
+    .put(deleteNhaXuatBan)
 module.exports = router;

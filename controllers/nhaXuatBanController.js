@@ -1,104 +1,51 @@
-const NhaXuatBan = require('../models/nhaXuatBanModel');
-const asyncHandler = require('../middleware/asyncHandler.js')
-const AppError = require('../middleware/appError.js')
+const NhaXuatBanService = require("../services/nhaXuatBan.service");
+const MongoDB = require("../utils/mongodb");
+const AppError = require('../middleware/appError');
 
+const findAll = async (req, res, next) => {
+    let documents = [];
 
-// Lấy danh sách các nhà xuất bản
-const getNhaXuatBan = asyncHandler(async (req, res, next) => {
-    const nhaXuatBanList = await NhaXuatBan.find();
-    res.status(200).json(nhaXuatBanList);
-});
+    try {
+        const nhaXuatBanService = new NhaXuatBanService(MongoDB.client);
+        documents = await nhaXuatBanService.find({});
+    } catch (error) {
+        return next(new AppError('Không tìm thấy nhà xuất bản', 404));
+    }
+    res.status(200).json(documents);
+}
 
+const deleteNhaXuatBan = async (req, res, next) => {
+    try {
+        const nhaXuatBanService = new NhaXuatBanService(MongoDB.client);
+        const document = await nhaXuatBanService.delete(req.params.id);
+        if (document) {
+            return next(new AppError('Nhà xuất bản không tồn tại', 404));
+        }
+        return res.send({ message: "Nhà xuất bản đã được xóa thành công" });
+    } catch (error) {
+        return next(new AppError(`Không thể xóa nhà xuất bản với id=${req.params.id}`, 500));
+    }
+}
 
-/// Tạo một nhà xuất bản mới
-const createNhaXuatBan = asyncHandler(async (req, res, next) => {
-    const { TenNXB, DiaChi } = req.body;
-
-    // Kiểm tra xem tên nhà xuất bản có tồn tại không
-    const existingNhaXuatBan = await NhaXuatBan.findOne({ TenNXB });
-    if (existingNhaXuatBan) {
-
-        return next(new AppError('Nhà xuất bản đã tồn tại', 400))
+const updateNhaXuatBan = async (req, res, next) => {
+    if (Object.keys(req.body).length === 0) {
+        return next(new AppError("Dữ liệu cần cập nhật rỗng!", 400));
     }
 
-    // Tạo nhà xuất bản mới
-    const nhaXuatBan = new NhaXuatBan({ TenNXB, DiaChi });
-    await nhaXuatBan.save();
-
-    res.status(201).json(nhaXuatBan);
-});
-
-// Cập nhật thông tin của một nhà xuất bản
-const updateNhaXuatBan = asyncHandler(async (req, res, next) => {
-    const { id } = req.params;
-    const { TenNXB, DiaChi } = req.body;
-
-    // Tìm và cập nhật nhà xuất bản theo mã ID
-    const nhaXuatBan = await NhaXuatBan.findById(id);
-    if (!nhaXuatBan) {
-        return next(new AppError('Nhà xuất bản không tồn tại', 404))
-
+    try {
+        const nhaXuatBanService = new NhaXuatBanService(MongoDB.client);
+        const document = await nhaXuatBanService.update(req.params.id, req.body);
+        if (document) {
+            return next(new AppError("Không tìm thấy nhà xuất bản", 404));
+        }
+        return res.send({ message: "Nhà xuất bản được cập nhật thành công" });
+    } catch (error) {
+        return next(new AppError(`Không thể cập nhật nhà xuất bản với id=${req.params.id}`, 500));
     }
-
-    // Cập nhật thông tin nhà xuất bản
-    nhaXuatBan.TenNXB = TenNXB || nhaXuatBan.TenNXB;
-    nhaXuatBan.DiaChi = DiaChi || nhaXuatBan.DiaChi;
-    const updatedNhaXuatBan = await nhaXuatBan.save();
-
-    res.status(200).json(updatedNhaXuatBan);
-});
-
-// Xóa một nhà xuất bản
-const deleteNhaXuatBan = asyncHandler(async (req, res, next) => {
-    const { id } = req.params;
-
-    // Tìm và xóa nhà xuất bản theo mã ID
-    const nhaXuatBan = await NhaXuatBan.findById(id);
-    if (!nhaXuatBan) {
-        return next(new AppError('Nhà xuất bản không tồn tại', 404))
-    }
-
-    await nhaXuatBan.remove();
-    res.status(200).json({ message: 'Nhà xuất bản đã được xóa' });
-});
-
-// Lấy thông tin của một nhà xuất bản theo mã
-const getNhaXuatBanById = asyncHandler(async (req, res, next) => {
-    const { id } = req.params;
-
-    // Tìm nhà xuất bản theo mã ID
-    const nhaXuatBan = await NhaXuatBan.findById(id);
-    if (!nhaXuatBan) {
-        return next(new AppError('Nhà xuất bản không tồn tại', 404))
-    }
-
-    // Trả về thông tin nhà xuất bản
-    res.status(200).json(nhaXuatBan);
-});
-
-const findNhaXuatBanByName = asyncHandler(async (req, res, next) => {
-    const { name } = req.query; // Lấy tên nhà xuất bản từ query parameters
-
-    // Tìm nhà xuất bản theo tên
-    const nhaXuatBanList = await NhaXuatBan.find({
-        TenNXB: { $regex: new RegExp(name, 'i') } // Sử dụng biểu thức chính quy để tìm kiếm tên nhà xuất bản không phân biệt chữ hoa chữ thường
-    });
-
-    // Nếu không tìm thấy nhà xuất bản, trả về thông báo
-    if (nhaXuatBanList.length === 0) {
-        return next(new AppError('Không tìm thấy nhà xuất bản nào', 404));
-    }
-
-    // Trả về danh sách nhà xuất bản tìm được
-    res.status(200).json(nhaXuatBanList);
-});
-
+}
 
 module.exports = {
-    getNhaXuatBan,
-    createNhaXuatBan,
-    updateNhaXuatBan,
+    findAll,
     deleteNhaXuatBan,
-    getNhaXuatBanById,
-    findNhaXuatBanByName
+    updateNhaXuatBan
 };

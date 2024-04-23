@@ -11,7 +11,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5175"
         },
-        "TacGia": "Nguyễn Văn A"
+        "TacGia": "Nguyễn Văn An"
     },
     {
         "_id": {
@@ -25,7 +25,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5176"
         },
-        "TacGia": "Lê Thị B"
+        "TacGia": "Lê Thị Bích"
     },
     {
         "_id": {
@@ -39,7 +39,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5177"
         },
-        "TacGia": "Trần Văn C"
+        "TacGia": "Trần Văn Can"
     },
     {
         "_id": {
@@ -53,7 +53,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5175"
         },
-        "TacGia": "Phạm Thị D"
+        "TacGia": "Phạm Thị Dung"
     },
     {
         "_id": {
@@ -67,7 +67,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5180"
         },
-        "TacGia": "Nguyễn Thị E"
+        "TacGia": "Nguyễn Thị Em"
     },
     {
         "_id": {
@@ -81,7 +81,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a517b"
         },
-        "TacGia": "Trần Văn F"
+        "TacGia": "Trần Văn Thưởng"
     },
     {
         "_id": {
@@ -95,7 +95,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5180"
         },
-        "TacGia": "Lê Thị G"
+        "TacGia": "Lê Thị Giang"
     },
     {
         "_id": {
@@ -109,7 +109,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a517b"
         },
-        "TacGia": "Phạm Văn H"
+        "TacGia": "Phạm Văn Hùng"
     },
     {
         "_id": {
@@ -123,7 +123,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5180"
         },
-        "TacGia": "Nguyễn Văn I"
+        "TacGia": "Nguyễn Văn In"
     },
     {
         "_id": {
@@ -137,7 +137,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5180"
         },
-        "TacGia": "Trần Thị K"
+        "TacGia": "Trần Thị Khang"
     },
     {
         "_id": {
@@ -152,7 +152,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5180"
         },
-        "TacGia": "Lê Văn L"
+        "TacGia": "Lê Văn Liêm"
     },
     {
         "_id": {
@@ -166,7 +166,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5180"
         },
-        "TacGia": "Phạm Thị M"
+        "TacGia": "Phạm Thị Mai"
     },
     {
         "_id": {
@@ -180,7 +180,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5175"
         },
-        "TacGia": "Nguyễn Văn N"
+        "TacGia": "Nguyễn Văn Nhung"
     },
     {
         "_id": {
@@ -194,7 +194,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5176"
         },
-        "TacGia": "Trần Thị O"
+        "TacGia": "Trần Thị Ong"
     },
     {
         "_id": {
@@ -208,7 +208,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5177"
         },
-        "TacGia": "Lê Văn P"
+        "TacGia": "Lê Văn Phương"
     },
     {
         "_id": {
@@ -222,7 +222,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5175"
         },
-        "TacGia": "Phạm Thị Q"
+        "TacGia": "Phạm Thị Quyên"
     },
     {
         "_id": {
@@ -236,7 +236,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5176"
         },
-        "TacGia": "Nguyễn Văn R"
+        "TacGia": "Nguyễn Văn Ran"
     },
     {
         "_id": {
@@ -250,7 +250,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5177"
         },
-        "TacGia": "Trần Thị S"
+        "TacGia": "Trần Thị Sương"
     },
     {
         "_id": {
@@ -264,7 +264,7 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5175"
         },
-        "TacGia": "Lê Văn T"
+        "TacGia": "Lê Văn Thắng"
     },
     {
         "_id": {
@@ -278,6 +278,6 @@
         "MaNXB": {
             "$oid": "6624d5acfe234665639a5176"
         },
-        "TacGia": "Phạm Thị U"
+        "TacGia": "Phạm Thị Nga"
     }
 ]

@@ -1,13 +1,13 @@
 const Sach = require('../models/sachModel');
 const asyncHandler = require('../middleware/asyncHandler');
 const AppError = require('../middleware/appError');
-const TheoDoiMuonSach = require('../models/donMuonModel');
 
 const SachService = require("../services/sach.service");
 const MongoDB = require("../utils/mongodb");
+const { ObjectId } = require("mongodb");
 
 
-// Retrieve all contacts of a user from the database
+
 const findAll = async (req, res, next) => {
     let documents = [];
 
@@ -26,135 +26,89 @@ const findAll = async (req, res, next) => {
 }
 
 
-
-
-// Lấy danh sách các sách
-const getSachList = asyncHandler(async (req, res, next) => {
-    const sachList = await Sach.find({});
-    console.log(sachList)
-    res.status(200).json(sachList);
-});
-
-// Tạo một sách mới
-const createSach = asyncHandler(async (req, res, next) => {
-    const { TenSach, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
-
-    // Kiểm tra xem sách đã tồn tại chưa
-    const existingSach = await Sach.findOne({ TenSach, MaNXB, NamXuatBan });
-    if (existingSach) {
-        return next(new AppError('Sách đã tồn tại', 400));
+const deleteBook = async (req, res, next) => {
+    try {
+        const sachService = new SachService(MongoDB.client);
+        const document = await sachService.delete(req.params.id); //Trả về undefined khi xóa thành công
+        if (document) {
+            return next(new AppError('Sách không tồn tại', 404));
+        }
+        return res.send({ message: "Sách đã được xóa thành công" });
+    } catch (error) {
+        return next(new AppError(`Không thể xóa sách với id=${req.params.id}`, 500));
     }
+}
 
-    // Kiểm tra xem có tệp hình ảnh được tải lên không
-    let HinhAnh = null;
-    if (req.file) {
-        // Nếu có tệp hình ảnh, lấy đường dẫn đến hình ảnh
-        HinhAnh = `/${req.file.path.replace(/\\/g, '/')}`;
+
+// exports.findOne = async (req, res, next) => {
+//     try {
+//         const contactService = new ContactService(MongoDB.client);
+//         const document = await contactService.findById(req.params.id);
+//         if (!document) {
+//             return next(new ApiError(404, "Contact not found"));
+//         }
+//         return res.send(document);
+//     } catch (error) {
+
+//         return next(new ApiError(500, `Error retrieving contact with id=${req.params.id}`))
+//     }
+// }
+
+
+const updateBook = async (req, res, next) => {
+    try {
+        const sachService = new SachService(MongoDB.client);
+
+        // // Kiểm tra xem MaNXB có trong req.body không
+        if (req.body.MaNXB) {
+            // Chuyển đổi MaNXB thành ObjectId
+            req.body.MaNXB = new ObjectId(req.body.MaNXB);
+        }
+
+        const document = await sachService.update(req.params.id, req.body);
+
+        if (document)  //document nhận undefined khi cập nhật thành công
+            return next(new AppError("Không tìm thấy sách", 404));
+        return res.send({ message: "Sách được cập nhật thành công" });
+    } catch (error) {
+        return next(new AppError(`Không thể cập nhật sách với id=${req.params.id}`, 500));
     }
-
-    // Tạo sách mới
-    const sach = new Sach({ TenSach, HinhAnh, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia });
-    await sach.save();
-
-    res.status(201).json(sach);
-});
+}
 
 
-// Cập nhật thông tin của một sách
-const updateSach = asyncHandler(async (req, res, next) => {
-    const { id } = req.params;
-    const { TenSach, DonGia, SoQuyen, NamXuatBan, MaNXB, TacGia } = req.body;
 
-    // Tìm sách theo mã ID
-    const sach = await Sach.findById(id);
-    if (!sach) {
-        return next(new AppError('Sách không tồn tại', 404));
+const createBook = async (req, res, next) => {
+    // if (!req.body?.name) {
+    //     return next(new ApiError(400, "Name can not be empty"));
+    // }
+    try {
+        // // Kiểm tra xem MaNXB có trong req.body không
+        if (req.body.MaNXB) {
+            // Chuyển đổi MaNXB thành ObjectId
+            req.body.MaNXB = new ObjectId(req.body.MaNXB);
+        }
+        console.log(req.body)
+
+        const sachService = new SachService(MongoDB.client);
+        const document = await sachService.create(req.body);
+        if (document)  //document nhận undefined khi cập nhật thành công
+            return next(new AppError("Không tạo được sách", 404));
+        return res.send({ message: "Sách được tạo thành công" });
+    } catch (error) {
+
+        return next(new AppError(`Xuất hiện lỗi trong quá trình tạo sách`, 500));
     }
-
-    // Cập nhật thông tin sách
-    sach.TenSach = TenSach || sach.TenSach;
-    sach.DonGia = DonGia || sach.DonGia;
-    sach.SoQuyen = SoQuyen || sach.SoQuyen;
-    sach.NamXuatBan = NamXuatBan || sach.NamXuatBan;
-    sach.MaNXB = MaNXB || sach.MaNXB;
-    sach.TacGia = TacGia || sach.TacGia;
-
-    // Xử lý hình ảnh nếu có tệp được tải lên
-    if (req.file) {
-        // Nếu có tệp hình ảnh, cập nhật thuộc tính HinhAnh
-        sach.HinhAnh = `/${req.file.path.replace(/\\/g, '/')}`;
-    }
-
-    const updatedSach = await sach.save();
-
-    res.status(200).json(updatedSach);
-});
-
-// Xóa một sách
-const deleteSach = asyncHandler(async (req, res, next) => {
-    const { id } = req.params;
-
-    // Kiểm tra xem sách có đang nằm trong đơn mượn nào không
-    const isBorrowed = await TheoDoiMuonSach.exists({ MaSach: id });
-    if (isBorrowed) {
-        return next(new AppError('Sách đang nằm trong đơn mượn sách và không thể xóa.', 400));
-    }
-
-    // Tìm sách theo mã ID
-    const sach = await Sach.findById(id);
-    if (!sach) {
-        return next(new AppError('Sách không tồn tại', 404));
-    }
-
-    // Xóa sách
-    await sach.remove();
-    res.status(200).json({ message: 'Sách đã được xóa' });
-});
-
-// Lấy thông tin của một sách theo mã ID
-const getSachById = asyncHandler(async (req, res, next) => {
-    const { id } = req.params;
-
-    // Tìm sách theo mã ID
-    const sach = await Sach.findById(id);
-    if (!sach) {
-        return next(new AppError('Sách không tồn tại', 404));
-    }
-
-    // Trả về thông tin sách
-    res.status(200).json(sach);
-});
-
-const findSachByName = asyncHandler(async (req, res, next) => {
-    const { name } = req.query; // Lấy tên sách từ query parameters
-
-    // Tìm sách theo tên
-    const sachList = await Sach.find({
-        TenSach: { $regex: new RegExp(name, 'i') } // Sử dụng biểu thức chính quy để tìm kiếm tên sách không phân biệt chữ hoa chữ thường
-    });
-
-    // Nếu không tìm thấy sách, trả về thông báo
-    if (sachList.length === 0) {
-        return next(new AppError('Không tìm thấy sách nào', 404));
-    }
-
-    // Trả về danh sách sách tìm được
-    res.status(200).json(sachList);
-});
-
+}
 
 module.exports = {
-    getSachList,
-    createSach,
-    updateSach,
-    deleteSach,
-    getSachById,
-    findSachByName,
-    findAll
+    findAll,
+    deleteBook,
+    updateBook,
+    createBook
 };
 
 
-// // // @desc    Delete a cabin
+
 // // // @route   DELETE /api/cabins/:id
 // // // @access  Private/Admin
 // export const deleteCabin = asyncHandler(async (req, res, next) => {

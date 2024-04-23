@@ -71,7 +71,6 @@ app.post('/upload', parser.fields([{ name: "img", maxCount: 1 }]), function (req
 
 
 
-
 /*============================== HANDLE ERROR ================================*/
 
 // 404 Not Found handler

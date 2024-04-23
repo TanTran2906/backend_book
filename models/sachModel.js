@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ObjectId = require('mongoose').Types.ObjectId;
 
 const sachSchema = new Schema({
     TenSach: { type: String, required: true },
@@ -10,6 +11,9 @@ const sachSchema = new Schema({
     MaNXB: { type: mongoose.Schema.Types.ObjectId, ref: 'NhaXuatBan', required: true },
     TacGia: { type: String, required: true }
 });
+
+
+
 
 const Sach = mongoose.model('Sach', sachSchema);
 
