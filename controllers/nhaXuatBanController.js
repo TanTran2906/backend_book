@@ -14,7 +14,7 @@ const findAll = async (req, res, next) => {
     res.status(200).json(documents);
 }
 
-const deleteNhaXuatBan = async (req, res, next) => {
+const deletePublisher = async (req, res, next) => {
     try {
         const nhaXuatBanService = new NhaXuatBanService(MongoDB.client);
         const document = await nhaXuatBanService.delete(req.params.id);
@@ -27,14 +27,12 @@ const deleteNhaXuatBan = async (req, res, next) => {
     }
 }
 
-const updateNhaXuatBan = async (req, res, next) => {
-    if (Object.keys(req.body).length === 0) {
-        return next(new AppError("Dữ liệu cần cập nhật rỗng!", 400));
-    }
-
+const updatePublisher = async (req, res, next) => {
     try {
         const nhaXuatBanService = new NhaXuatBanService(MongoDB.client);
+
         const document = await nhaXuatBanService.update(req.params.id, req.body);
+
         if (document) {
             return next(new AppError("Không tìm thấy nhà xuất bản", 404));
         }
@@ -44,8 +42,25 @@ const updateNhaXuatBan = async (req, res, next) => {
     }
 }
 
+const createPublisher = async (req, res, next) => {
+    try {
+        const nhaXuatBanService = new NhaXuatBanService(MongoDB.client);
+        const document = await nhaXuatBanService.create(req.body);
+        if (!document) {
+            return next(new AppError("Không tạo được nhà xuất bản", 404));
+        }
+        return res.send({ message: "Nhà xuất bản được tạo thành công" });
+    } catch (error) {
+        console.log(error)
+        return next(new AppError(`Xuất hiện lỗi trong quá trình tạo nhà xuất bản`, 500));
+    }
+}
+
 module.exports = {
     findAll,
-    deleteNhaXuatBan,
-    updateNhaXuatBan
+    deletePublisher,
+    updatePublisher,
+    createPublisher
 };
+
+

@@ -17,6 +17,7 @@ const nhaXuatBanRouter = require('./routes/nhaXuatBanRoutes');
 const uploadRoutes = require('./routes/uploadRoutes.js');
 const docGiaRoutes = require('./routes/docGiaRoutes.js');
 const cloudinary = require('./config/cloudinary.js')
+const auth = require('./routes/auth.js')
 
 dotenv.config()
 
@@ -47,7 +48,7 @@ app.use('/api/sach', sachRouter);
 app.use('/api/nhaxuatban', nhaXuatBanRouter);
 // app.use('/api/theodoidonmuon', nhaXuatBanRouter);
 app.use('/api/docgia', docGiaRoutes);
-
+app.use('/api/admin', auth);
 // app.use('/api/upload', uploadRoutes);
 
 // const uploadsDirectory = path.join(__dirname, '/uploads');
