@@ -52,21 +52,37 @@ app.use('/api/docgia', docGiaRoutes);
 
 // const uploadsDirectory = path.join(__dirname, '/uploads');
 // app.use('/uploads', express.static(uploadsDirectory));
+// Cấu hình multer storage
 const storage = new CloudinaryStorage({
     cloudinary: cloudinary,
     params: {
         folder: 'some-folder-name',
-        format: async (req, file) => 'jpg', // supports promises as well
+        format: async (req, file) => 'jpg',
         public_id: (req, file) => `image_${Date.now()}`,
-
     },
-
 });
 const parser = multer({ storage: storage });
 
+// Xử lý yêu cầu gửi hình ảnh
 app.post('/upload', parser.fields([{ name: "img", maxCount: 1 }]), function (req, res) {
     const link_img = req.files['img'][0];
     res.send(link_img)
+});
+
+// Middleware xử lý yêu cầu OPTIONS
+app.options('/upload', (req, res) => {
+    res.sendStatus(200);
+});
+
+// Các middleware xử lý yêu cầu POST và OPTIONS khác có thể được thêm ở đây
+
+// Khởi tạo middleware xử lý các yêu cầu POST sau yêu cầu OPTIONS
+app.use((req, res, next) => {
+    if (req.method === 'POST' && req.path === '/upload') {
+        next();
+    } else {
+        next();
+    }
 });
 
 

@@ -78,16 +78,13 @@ const updateBook = async (req, res, next) => {
 
 
 const createBook = async (req, res, next) => {
-    // if (!req.body?.name) {
-    //     return next(new ApiError(400, "Name can not be empty"));
-    // }
+
     try {
         // // Kiểm tra xem MaNXB có trong req.body không
-        if (req.body.MaNXB) {
-            // Chuyển đổi MaNXB thành ObjectId
-            req.body.MaNXB = new ObjectId(req.body.MaNXB);
-        }
-        console.log(req.body)
+        // if (req.body.MaNXB) {
+        //     // Chuyển đổi MaNXB thành ObjectId
+        //     req.body.MaNXB = new ObjectId(req.body.MaNXB);
+        // }
 
         const sachService = new SachService(MongoDB.client);
         const document = await sachService.create(req.body);
@@ -95,7 +92,7 @@ const createBook = async (req, res, next) => {
             return next(new AppError("Không tạo được sách", 404));
         return res.send({ message: "Sách được tạo thành công" });
     } catch (error) {
-
+        console.log(error)
         return next(new AppError(`Xuất hiện lỗi trong quá trình tạo sách`, 500));
     }
 }

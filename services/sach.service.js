@@ -60,10 +60,10 @@ class SachService {
             NamXuatBan: payload.NamXuatBan,
             TacGia: payload.TacGia,
             HinhAnh: payload.HinhAnh,
-            MaNXB: payload.MaNXB,
+            MaNXB: payload.MaNXB ? payload.MaNXB : null, // Đảm bảo rằng MaNXB được trích xuất từ payload
         };
 
-        // Remove undefined fields
+        // Loại bỏ các trường có giá trị là undefined
         Object.keys(book).forEach(
             (key) => book[key] === undefined && delete book[key]
         );
@@ -85,8 +85,27 @@ class SachService {
     }
 
     async create(payload) {
-        const document = await this.Sach.create(payload);
-        return document;
+        try {
+            // Trích xuất dữ liệu sách từ payload
+            const bookData = this.extractSachData(payload);
+
+
+            // Kiểm tra xem MaNXB có trong payload không
+            if (!bookData.MaNXB) {
+                return;
+            }
+
+            // Chuyển đổi MaNXB thành ObjectId
+            bookData.MaNXB = new ObjectId(bookData.MaNXB);
+
+            // Tạo mới sách trong cơ sở dữ liệu
+            const result = await this.Sach.insertOne(bookData);
+
+            // Trả về thông tin sách vừa được tạo
+            return undefined;
+        } catch (error) {
+            throw new Error(`Không thể tạo sách: ${error.message}`);
+        }
     }
 }
 module.exports = SachService;
