@@ -1,21 +1,22 @@
+// const NhaXuatBanService = require("../services/nhaXuatBan.service");
 const MongoDB = require("../utils/mongodb");
 const AppError = require('../middleware/appError');
-const DocGiaService = require('../services/docGia.service')
+const NhanVienService = require('../services/nhanVien.service')
 
-const loginDocGia = async (req, res, next) => {
+const login = async (req, res, next) => {
     try {
-        const { DienThoai, Password } = req.body;
+        const { SoDienThoai, Password } = req.body;
         console.log(req.body)
 
         // Kiểm tra nếu không có số điện thoại hoặc mật khẩu
-        if (!DienThoai || !Password) {
+        if (!SoDienThoai || !Password) {
             return next(new AppError('Vui lòng cung cấp số điện thoại và mật khẩu', 400));
         }
 
-        const docGiaService = new DocGiaService(MongoDB.client);
+        const nhanVienService = new NhanVienService(MongoDB.client);
 
         // Gọi phương thức đăng nhập từ service
-        const loggedInUser = await docGiaService.login(DienThoai, Password);
+        const loggedInUser = await nhanVienService.login(SoDienThoai, Password);
 
         if (loggedInUser) {
             res.status(200).json(loggedInUser); // Gửi thông tin người dùng về frontend
@@ -28,4 +29,4 @@ const loginDocGia = async (req, res, next) => {
     }
 }
 
-module.exports = { loginDocGia };
+module.exports = { login };

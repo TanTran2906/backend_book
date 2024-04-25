@@ -16,19 +16,19 @@ const docGiaSchema = new Schema({
 });
 
 //METHOD
-docGiaSchema.methods.matchPassword = async function (enteredPassword) {
-    return await bcrypt.compare(enteredPassword, this.Password)
-}
+// docGiaSchema.methods.matchPassword = async function (enteredPassword) {
+//     return await bcrypt.compare(enteredPassword, this.Password)
+// }
 
-//MIDDLEWARE
-docGiaSchema.pre('save', async function (next) {
-    if (!this.isModified('Password')) {
-        next();
-    }
+// //MIDDLEWARE
+// docGiaSchema.pre('save', async function (next) {
+//     if (!this.isModified('Password')) {
+//         next();
+//     }
 
-    const salt = await bcrypt.genSalt(10); //Quyết định độ mạnh mật khẩu
-    this.Password = await bcrypt.hash(this.Password, salt);
-});
+//     const salt = await bcrypt.genSalt(10); //Quyết định độ mạnh mật khẩu
+//     this.Password = await bcrypt.hash(this.Password, salt);
+// });
 
 
 
